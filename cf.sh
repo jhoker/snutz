@@ -5,11 +5,11 @@ NC='\e[0m'
 MYIP=$(wget -qO- https://icanhazip.com/);
 echo "Checking VPS"
 apt install jq curl -y
-DOMAIN=ipulsnutz.me
+DOMAIN=harisvpn.my.id
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c4)
-SUB_DOMAIN=${sub}.ipulsnutz.me
-CF_ID=ipulsnutz@gmail.com
-CF_KEY=018acaff6864f57f1399c8236945918086632
+SUB_DOMAIN=${sub}.harisvpn.my.id
+CF_ID=s.hariscbdc@gmail.com
+CF_KEY=d565965f9d2fc5449329a2b07b3b60cf007aa
 set -euo pipefail
 IP=$(wget -qO- https://icanhazip.com/);
 echo "Updating DNS for ${SUB_DOMAIN}..."
