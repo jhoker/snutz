@@ -87,15 +87,4 @@ systemctl enable "wg-quick@wg0"
 systemctl is-active --quiet "wg-quick@wg0"
 WG_RUNNING=$?
 
-# Tambahan
-cd /usr/bin
-wget -O add-wg "https://raw.githubusercontent.com/jhoker/snutz/main/add-wg.sh"
-wget -O del-wg "https://raw.githubusercontent.com/jhoker/snutz/main/del-wg.sh"
-wget -O cek-wg "https://raw.githubusercontent.com/jhoker/snutz/main/cek-wg.sh"
-wget -O renew-wg "https://raw.githubusercontent.com/jhoker/snutz/main/renew-wg.sh"
-chmod +x add-wg
-chmod +x del-wg
-chmod +x cek-wg
-chmod +x renew-wg
-cd
 rm -f /root/wg.sh
