@@ -7,7 +7,7 @@ echo "Checking VPS"
 clear
 # Load params
 source /etc/wireguard/params
-source /var/lib/premium-script/ipvps.conf
+source /var/lib/SIJA/ipvps.conf
 if [[ "$IP" = "" ]]; then
 SERVER_PUB_IP=$(wget -qO- https://icanhazip.com/);
 else
@@ -84,5 +84,5 @@ AllowedIPs = $CLIENT_ADDRESS/32" >>"/etc/wireguard/$SERVER_WG_NIC.conf"
 	echo -e "Wireguard	: http://$MYIP:81/$CLIENT_NAME.conf"
 	echo -e "==============================="
 	echo -e "Expired On      : $exp"
-        echo -e "By HarisNET"
+        echo -e "By IpulSnutz"
 	rm -f /root/wg0-client-$CLIENT_NAME.conf
