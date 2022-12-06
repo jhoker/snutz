@@ -5,7 +5,7 @@ NC='\e[0m'
 MYIP=$(wget -qO- https://icanhazip.com/);
 echo "Checking VPS"
 clear
-source /var/lib/premium-script/ipvps.conf
+source /var/lib/SIJA/ipvps.conf
 if [[ "$IP" = "" ]]; then
 PUBLIC_IP=$(wget -qO- https://icanhazip.com/);
 else
