@@ -5,7 +5,7 @@ NC='\e[0m'
 MYIP=$(wget -qO- https://icanhazip.com/);
 echo "Checking VPS"
 clear
-source /var/lib/premium-script/ipvps.conf
+source /var/lib/SIJA/ipvps.conf
 if [[ "$IP" = "" ]]; then
 PUBLIC_IP=$(wget -qO- https://icanhazip.com/);
 else
@@ -13,7 +13,7 @@ PUBLIC_IP=$IP
 fi
 until [[ $VPN_USER =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 		read -rp "Username: " -e VPN_USER
-		CLIENT_EXISTS=$(grep -w $VPN_USER /var/lib/premium-script/data-user-pptp | wc -l)
+		CLIENT_EXISTS=$(grep -w $VPN_USER /var/lib/SIJA/data-user-pptp | wc -l)
 
 		if [[ ${CLIENT_EXISTS} == '1' ]]; then
 			echo ""
@@ -33,7 +33,7 @@ EOF
 
 # Update file attributes
 chmod 600 /etc/ppp/chap-secrets*
-echo -e "### $VPN_USER $exp">>"/var/lib/premium-script/data-user-pptp"
+echo -e "### $VPN_USER $exp">>"/var/lib/SIJA/data-user-pptp"
 cat <<EOF
 
 ================================
